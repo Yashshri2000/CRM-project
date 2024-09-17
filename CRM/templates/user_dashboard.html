@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href={% static 'base.css' %}>
+
+    <style>
+        h1{
+            padding: 15%;
+            padding-left: 30%;
+            color-text: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav bg-primary" >         
+        <a href={% url 'user_home' %}><li>User Home</li></a>
+        <a href={% url 'jobs' %}><li>Jobs</li></a>
+
+    </div>
+    <h1>Welcome to the profile</h1>
+    {{jobs}}
+    
+</html>

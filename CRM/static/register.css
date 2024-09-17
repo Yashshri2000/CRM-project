@@ -1,0 +1,30 @@
+#sign{
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+h2{
+    margin-left: 38%;
+}
+form{
+    font-size: 18px;
+} 
+#submit{
+    font-size: 20px;
+    background-color: rgb(21, 207, 21);
+}
+.user{
+    margin-left: 38%;
+    /* border: 2px solid black; */
+    padding: 20px;
+    width:30%;
+    background-color: rgb(223, 196, 196);
+}
+#login{
+    font-size: 20px;
+    color: antiquewhite;
+    background-color: rgb(242, 241, 241);
+
+} 
+p{
+    margin-left: 38%;
+}

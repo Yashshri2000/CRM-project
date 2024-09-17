@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href={% static 'base.css' %}>
+    {% block head %}{% endblock head %}
+</head>
+<body>
+    <div class="nav bg-primary" >
+                  
+            <a href={% url 'user_login' %}><li>User Login</li></a>
+            <a href={% url 'signup' %}><li>Sign Up</li></a>
+         
+        
+    </div>
+    {% block body %} {% endblock body %}
+</body>
+</html>

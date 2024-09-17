@@ -1,0 +1,7 @@
+*.pyc
+**/migrations/**
+*.log
+__pycache__
+media
+__init__
+venv/

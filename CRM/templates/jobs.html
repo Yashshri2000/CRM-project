@@ -1,0 +1,68 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    </head>
+<body>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-sm-4">
+            
+            <img  class="rounded-circle" src="{{user.image.url}}" alt="Profile" width="300px" height="300px">
+            <h4 class="text-center text-secondary">{{user.bio}}<h4><br>
+             
+
+                <div class="mt-4">
+                    <h5 class="text-primary">Name</h5>
+                    <p>{{user}}</p>
+                    <hr>
+
+                    <h5 class="text-primary">Qualification</h5>
+                    <p>{{user.qualification}}</p>
+                    <hr>
+
+                    <h5 class="text-primary">contact</h5>
+                    <p>{{user.phone}}</p>
+                    <hr>
+                 
+                 
+                </div>
+        </div>
+
+        
+        <div class="col-sm-8">
+        <h2 class="text-primary text-center"> Apply Now</h2>
+        <table class="table table-hover" id="example">
+            <thead>
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Company Name</th>
+                    <th>Job Title</th>
+                    <th>Salary</th>
+                    <th>Location</th>
+                    <th>Created On</th>
+                    <th>Apply</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for job in jobs %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{job.company.company_name}}</td>
+                    <td>{{job.title}}</td>
+                    <td>{{job.salary}}</td>
+                    <td>{{job.location}}</td>
+                    <td>{{job.creation_date}}</td>
+        
+                    {% if job.id in data %}
+                    <td><a class="btn btn-warning rounded">Applied</a></td>
+                    {% else %}
+                    <td><a href="/job-detail/{{job.id}}/" class="btn btn-danger">Apply</a></td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    </div>
+</body>
